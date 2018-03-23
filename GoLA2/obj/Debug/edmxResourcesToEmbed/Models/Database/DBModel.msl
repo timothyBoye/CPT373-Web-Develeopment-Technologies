@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DatabaseModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGames">
+      <EntityTypeMapping TypeName="DatabaseModel.UserGame">
+        <MappingFragment StoreEntitySet="UserGame">
+          <ScalarProperty Name="UserGameID" ColumnName="UserGameID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Cells" ColumnName="Cells" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTemplates">
+      <EntityTypeMapping TypeName="DatabaseModel.UserTemplate">
+        <MappingFragment StoreEntitySet="UserTemplate">
+          <ScalarProperty Name="UserTemplateID" ColumnName="UserTemplateID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Cells" ColumnName="Cells" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

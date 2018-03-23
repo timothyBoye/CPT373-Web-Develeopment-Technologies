@@ -1,0 +1,65 @@
+﻿@model PagedList.IPagedList<GoLA2.Models.Database.UserGame>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "My Games";
+}
+
+<h2>My Games</h2>
+
+@using (Html.BeginForm("Index", "Games", FormMethod.Get))
+{
+    <div class="form-inline form-group control-label col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        @Html.Label("Search:") @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+        <input type="submit" value="Search" class="btn btn-default" />
+    </div>
+}
+@{
+    <div style="text-align:right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        @Html.ActionLink("Create New Game", "Create", "Games", new { @class = "btn btn-default" })
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Height", "Index", new { sortOrder = ViewBag.HeightSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Width", "Index", new { sortOrder = ViewBag.WidthSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Cells", "Index", new { sortOrder = ViewBag.CellSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Width)
+        </td>
+        <td>
+            <pre>@Html.DisplayFor(modelItem => item.Cells)</pre>
+        <td>
+            @Html.ActionLink("Play Game", "Play", new { id=item.UserGameID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserGameID })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

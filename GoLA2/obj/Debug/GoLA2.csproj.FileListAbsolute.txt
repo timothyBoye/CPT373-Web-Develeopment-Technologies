@@ -1,0 +1,132 @@
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\csc.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\vbc.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\GoLA2.dll.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\GoLA2.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\GoLA2.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\CryptSharp.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\EntityFramework.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\FluentValidation.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\FluentValidation.Mvc.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\PagedList.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\PagedList.Mvc.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Helpers.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Mvc.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Razor.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Webpages.Deployment.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Webpages.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Webpages.Razor.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\CryptSharp.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\CryptSharp.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\EntityFramework.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\FluentValidation.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\FluentValidation.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\FluentValidation.Mvc.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\PagedList.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\PagedList.Mvc.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Razor.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Webpages.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Webpages.Deployment.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Webpages.Razor.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Helpers.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\System.Web.Mvc.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\cs\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\da\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\de\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\es\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\fa\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\fi\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\fr\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\it\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\ko\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\mk\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\nl\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\pl\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\pt\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\ru\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\sv\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\tr\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\bin\zh-CN\FluentValidation.resources.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\obj\Debug\GoLA2.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\obj\Debug\GoLA2.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\GoLA2\GoLA2\obj\Debug\GoLA2.csprojResolveAssemblyReference.cache
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\csc.exe
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\vbc.exe
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\GoLA2.dll.config
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\GoLA2.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\GoLA2.pdb
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\CryptSharp.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\EntityFramework.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\FluentValidation.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\FluentValidation.Mvc.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\PagedList.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\PagedList.Mvc.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Helpers.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Mvc.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Razor.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Webpages.Deployment.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Webpages.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Webpages.Razor.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\CryptSharp.pdb
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\CryptSharp.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\EntityFramework.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\FluentValidation.pdb
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\FluentValidation.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\FluentValidation.Mvc.pdb
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\PagedList.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\PagedList.Mvc.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Razor.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Webpages.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Webpages.Deployment.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Webpages.Razor.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Helpers.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\System.Web.Mvc.xml
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\pl\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\sv\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\da\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\it\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\cs\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\ru\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\zh-CN\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\pt\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\mk\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\nl\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\de\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\ko\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\fi\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\fr\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\es\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\fa\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\bin\tr\FluentValidation.resources.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\obj\Debug\GoLA2.csprojResolveAssemblyReference.cache
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\obj\Debug\GoLA2.dll
+\\Mac\Home\Workspace\TO CLEAN AND SCREENSHOT\CPT373 Web Dev\GoLA2\GoLA2\obj\Debug\GoLA2.pdb

@@ -1,0 +1,81 @@
+﻿@model PagedList.IPagedList<GoLA2.Models.Database.UserTemplate>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Templates</h2>
+
+
+@using (Html.BeginForm("Index", "Templates", FormMethod.Get))
+{
+    <div class="form-inline form-group control-label col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        @Html.Label("Search:") @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" } )
+        <input type="submit" value="Search" class="btn btn-default" />
+    </div>
+}
+@{
+    if (Session[GoLA2.Controllers.UsersController.SessionUser] != null)
+    {
+        <div style="text-align:right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            @Html.ActionLink("Create New Template", "Create", "Templates", new { @class = "btn btn-default" })
+        </div>
+    }
+    else
+    {
+
+    }
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Height", "Index", new { sortOrder = ViewBag.HeightSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Width", "Index", new { sortOrder = ViewBag.WidthSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Cells", "Index", new { sortOrder = ViewBag.CellSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Submitted By", "Index", new { sortOrder = ViewBag.UserSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Width)
+            </td>
+            <td>
+                <pre>@Html.DisplayFor(modelItem => item.Cells)</pre>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.UserTemplateID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

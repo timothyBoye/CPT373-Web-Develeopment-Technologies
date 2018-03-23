@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>Game of Life</h1>
+    <p>
+        "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.<sup>[<a href="https://web.archive.org/web/20090603015231/http://ddi.cs.uni-potsdam.de/HyFISCH/Produzieren/lis_projekt/proj_gamelife/ConwayScientificAmerican.htm" target="_blank">1</a>]</sup>
+    </p>
+    <p>
+        The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced "players", by creating patterns with particular properties."
+    </p>
+    <p>
+       - <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" class="alert-link" target="_blank">Wikipedia</a>
+    </p>
+    <div style="text-align:center">
+            @Html.ActionLink("Find out more...", "About", "Home",null, new { @class = "btn btn-primary btn-group-lg btn-lg" })
+            &emsp;
+            @Html.ActionLink("Create new game...", "Index", "Games",null, new { @class = "btn btn-primary btn-group-lg btn-lg" })
+    </div>
+</div>
+
+<br />
+<div style="text-align:center">
+    <img src="Game_of_life_pulsar.gif" />
+</div>
+

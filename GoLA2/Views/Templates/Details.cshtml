@@ -1,0 +1,68 @@
+﻿@model GoLA2.Models.Database.UserTemplate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cells)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cells)
+        </dd>
+
+        <dt>
+            Submitted by
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FirstName) @Html.DisplayFor(model => model.User.LastName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @{
+        if (Session[GoLA2.Controllers.UsersController.SessionUser] != null)
+        {
+            if (Model.User.UserID == ((GoLA2.Models.Database.User)Session[GoLA2.Controllers.UsersController.SessionUser]).UserID)
+            {
+                @Html.ActionLink("Delete", "Delete", new { id = Model.UserTemplateID }, new { @class = "btn btn-default" })
+            }
+        }
+    }
+</p>
+<p>
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>

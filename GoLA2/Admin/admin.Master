@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.Master.cs" Inherits="GoLA2.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/modernizr-2.6.2.js"></script>
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <title>Game of Life | Admin Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="Index.aspx" class="navbar-brand">Game of Life | Admin</a>
+                </div>
+                <div id="navbarcollapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Users.aspx">Users</a></li>
+                        <li><a href="Templates.aspx">Templates</a></li>
+                    </ul>
+                    <asp:PlaceHolder runat="server" ID="loginMenu"></asp:PlaceHolder>
+                </div>
+            </div>
+        </div>
+    <form id="form1" runat="server">
+    <div class="container body-content">
+        <div class="row">
+            <div style="margin-bottom:10px" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 btn-group-vertical">
+                <h4>Welcome Back <asp:Literal runat="server" id="FirstName" EnableViewState="false" /> <asp:Literal runat="server" id="LastName" EnableViewState="false" /></h4>
+                <a href="Index.aspx" class="btn btn-primary btn-block">Home</a>
+                <a href="Users.aspx" class="btn btn-primary btn-block">Users</a>
+                <a href="Templates.aspx" class="btn btn-primary btn-block">Templates</a>
+                <br />
+                <asp:HyperLink runat="server" ID="LogBtn" class="btn btn-warning btn-block"></asp:HyperLink>
+                <a href="../" class="btn btn-warning btn-block">Back to Site</a>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>Website &copy; <%Response.Write(DateTime.Now.Year); %> - Timothy Boye</p>
+        </footer>
+    </div>
+    </form>
+</body>
+</html>

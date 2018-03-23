@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Play";
+}
+
+<h2>Play</h2>
+
+<div>
+    <hr />
+    <div>
+        <pre id="game" style="display:inline-block">@(((GoLA2.Models.Logic.GameOfLife)Session[GoLA2.Controllers.GamesController.SessionActiveGame]).ToString('█', ' '))</pre>
+    </div>
+    <div id="gamebuttons">
+        <button id="toggle" class="btn btn-primary" >Start Game</button>
+        <button id="save" class="btn btn-default" disabled="disabled">Save Game State</button>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+<script>
+
+    $(document).ready(function () {
+        var intervalID = false;
+
+        $("#toggle").click(function () {
+            if (intervalID == false) {
+                $("#save").prop('disabled', true);
+                $("#save").html('Save Game State');
+                $("#toggle").html('Stop Game');
+                intervalID = setInterval(function () {
+                    $.post("@Url.Action("PlayGameTick")", function (data) {
+                        $("#game").html(data);
+                    });
+                }, 1000);
+            }
+            else {
+                $("#save").prop('disabled', false);
+                $("#toggle").html('Start Game');
+                clearInterval(intervalID);
+                intervalID = false;
+            }
+        });
+
+        $("#save").click(function () {
+            $("#save").prop('disabled', true);
+            $("#toggle").prop('disabled', true);
+            $.post("@Url.Action("SaveGame")", function () {
+                $("#toggle").prop('disabled', false);
+                $("#save").html('Saved');
+            });
+        });
+    });
+</script>

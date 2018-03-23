@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserGames" Relationship="Self.FK_UserGame_To_User" FromRole="User" ToRole="UserGame" />
+    <NavigationProperty Name="UserTemplates" Relationship="Self.FK_UserTemplate_To_User" FromRole="User" ToRole="UserTemplate" />
+  </EntityType>
+  <EntityType Name="UserGame">
+    <Key>
+      <PropertyRef Name="UserGameID" />
+    </Key>
+    <Property Name="UserGameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Cells" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserGame_To_User" FromRole="UserGame" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserTemplate">
+    <Key>
+      <PropertyRef Name="UserTemplateID" />
+    </Key>
+    <Property Name="UserTemplateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Cells" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserTemplate_To_User" FromRole="UserTemplate" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_UserGame_To_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserGame" Type="Self.UserGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserGame">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTemplate_To_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserTemplate" Type="Self.UserTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserTemplate">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserGames" EntityType="Self.UserGame" />
+    <EntitySet Name="UserTemplates" EntityType="Self.UserTemplate" />
+    <AssociationSet Name="FK_UserGame_To_User" Association="Self.FK_UserGame_To_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserGame" EntitySet="UserGames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTemplate_To_User" Association="Self.FK_UserTemplate_To_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserTemplate" EntitySet="UserTemplates" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

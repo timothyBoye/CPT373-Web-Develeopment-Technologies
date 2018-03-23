@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+
+<h3>Origins</h3>
+
+<p>
+    Conway was interested in a problem presented in the 1940s by mathematician 
+    John von Neumann, who attempted to find a hypothetical machine that could 
+    build copies of itself and succeeded when he found a mathematical model for 
+    such a machine with very complicated rules on a rectangular grid. The Game 
+    of Life emerged as Conway's successful attempt to drastically simplify von 
+    Neumann's ideas. The game made its first public appearance in the October 
+    1970 issue of Scientific American, in Martin Gardner's "Mathematical Games" 
+    column. From a theoretical point of view, it is interesting because it has 
+    the power of a universal Turing machine: that is, anything that can be 
+    computed algorithmically can be computed within Conway's Game of Life. 
+</p>
+<p>Gardner wrote:</p>
+<p style="margin:auto auto; width:80%">
+    "The game made Conway instantly famous, but it also opened up a whole new 
+    field of mathematical research, the field of cellular automata ... Because 
+    of Life's analogies with the rise, fall and alterations of a society of 
+    living organisms, it belongs to a growing class of what are called 
+    "simulation games" (games that resemble real life processes)."
+</p>
+<br />
+<p>
+    Ever since its publication, Conway's Game of Life has attracted much interest, 
+    because of the surprising ways in which the patterns can evolve. Life provides 
+    an example of emergence and self-organization. Scholars in various fields, 
+    such as computer science, physics, biology, biochemistry, economics, 
+    mathematics, philosophy, and generative sciences have made use of the way that 
+    complex patterns can emerge from the implementation of the game's simple rules. 
+    The game can also serve as a didactic analogy, used to convey the somewhat 
+    counter-intuitive notion that "design" and "organization" can spontaneously 
+    emerge in the absence of a designer. For example, philosopher and cognitive 
+    scientist Daniel Dennett has used the analogue of Conway's Life "universe" 
+    extensively to illustrate the possible evolution of complex philosophical 
+    constructs, such as consciousness and free will, from the relatively simple set 
+    of deterministic physical laws, which might govern our universe.
+</p>
+<p>
+    Conway chose his rules carefully, after considerable experimentation, to meet 
+    these criteria: There should be no explosive growth, there should exist small 
+    initial patterns with chaotic, unpredictable outcomes, there should be 
+    potential for von Neumann universal constructors, the rules should be as 
+    simple as possible, whilst adhering to the above constraints.
+</p>
+
+<h3>Rules</h3>
+<ol>
+    <li>Any live cell with fewer than two live neighbours dies, as if caused by under-population.</li>
+    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+    <li>Any live cell with more than three live neighbours dies, as if by over-population.</li>
+    <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+</ol>
+<p>
+    - <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" class="alert-link" target="_blank">Wikipedia</a>
+</p>
+
+<h3>How to Play</h3>
+<p>
+    Any user can choose a predefined template and click play, this will start the
+    game ticking and the user can watch the results. A logged in user can go to 
+    the templates page and select create template to create a new template, they may
+    also save their games.
+</p>

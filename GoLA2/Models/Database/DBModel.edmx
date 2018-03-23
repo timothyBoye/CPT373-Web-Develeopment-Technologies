@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGame">
+          <Key>
+            <PropertyRef Name="UserGameID" />
+          </Key>
+          <Property Name="UserGameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Height" Type="int" Nullable="false" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="Cells" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserTemplate">
+          <Key>
+            <PropertyRef Name="UserTemplateID" />
+          </Key>
+          <Property Name="UserTemplateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Height" Type="int" Nullable="false" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="Cells" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_UserGame_To_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserGame" Type="Self.UserGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserGame">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserTemplate_To_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserTemplate" Type="Self.UserTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserTemplate">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseModelStoreContainer">
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGame" EntityType="Self.UserGame" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTemplate" EntityType="Self.UserTemplate" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_UserGame_To_User" Association="Self.FK_UserGame_To_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserGame" EntitySet="UserGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserTemplate_To_User" Association="Self.FK_UserTemplate_To_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserTemplate" EntitySet="UserTemplate" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserGames" Relationship="Self.FK_UserGame_To_User" FromRole="User" ToRole="UserGame" />
+          <NavigationProperty Name="UserTemplates" Relationship="Self.FK_UserTemplate_To_User" FromRole="User" ToRole="UserTemplate" />
+        </EntityType>
+        <EntityType Name="UserGame">
+          <Key>
+            <PropertyRef Name="UserGameID" />
+          </Key>
+          <Property Name="UserGameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Height" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="Cells" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_UserGame_To_User" FromRole="UserGame" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserTemplate">
+          <Key>
+            <PropertyRef Name="UserTemplateID" />
+          </Key>
+          <Property Name="UserTemplateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Height" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="Cells" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_UserTemplate_To_User" FromRole="UserTemplate" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_UserGame_To_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserGame" Type="Self.UserGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserGame">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserTemplate_To_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserTemplate" Type="Self.UserTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserTemplate">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserGames" EntityType="Self.UserGame" />
+          <EntitySet Name="UserTemplates" EntityType="Self.UserTemplate" />
+          <AssociationSet Name="FK_UserGame_To_User" Association="Self.FK_UserGame_To_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserGame" EntitySet="UserGames" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserTemplate_To_User" Association="Self.FK_UserTemplate_To_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserTemplate" EntitySet="UserTemplates" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DatabaseModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGames">
+            <EntityTypeMapping TypeName="DatabaseModel.UserGame">
+              <MappingFragment StoreEntitySet="UserGame">
+                <ScalarProperty Name="UserGameID" ColumnName="UserGameID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Cells" ColumnName="Cells" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTemplates">
+            <EntityTypeMapping TypeName="DatabaseModel.UserTemplate">
+              <MappingFragment StoreEntitySet="UserTemplate">
+                <ScalarProperty Name="UserTemplateID" ColumnName="UserTemplateID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Cells" ColumnName="Cells" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
